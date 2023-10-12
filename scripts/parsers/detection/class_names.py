@@ -22,12 +22,12 @@ class ClassNames(object):
     """
 
     __mai_class_names = {
-        "road_surface": "road",
-        "curb": "curb",
+        "road_surface": "road", #路面
+        "curb": "curb", #马路沿
         "car": "vehicles",
-        "train/tram": "vehicles",
+        "train/tram": "void",
         "truck": "vehicles",
-        "other_wheeled_transport": "vehicles",
+        "other_wheeled_transport": "void",
         "trailer": "vehicles",
         "van": "vehicles",
         "caravan": "vehicles",
@@ -39,7 +39,7 @@ class ClassNames(object):
         "grouped_botts_dots": "catseyebottsdots",
         "cats_eyes_and_botts_dots": "catseyebottsdots",
         "parking_marking": "lanemarks",
-        "lane_marking": "lanemarks",
+        "lane_marking": "lanemarks", # 车道线
         "parking_line": "lanemarks",
         "other_ground_marking": "lanemarks",
         "zebra_crossing": "lanemarks",
@@ -47,23 +47,23 @@ class ClassNames(object):
         "sky": "void",
         "fence": "void",
         "traffic_light_yellow": "traffic_light",
-        "ego_vehicle": "void",
-        "pole": "void",
+        "ego_vehicle": "void", # 画面区域
+        "pole": "void", # 柱子
         "structure": "void",
         "traffic_sign": "traffic_sign",
         "animal": "void",
-        "free_space": "void",
+        "free_space": "void", # 可用空间
         "traffic_light_red": "traffic_light",
         "unknown_traffic_light": "traffic_light",
         "movable_object": "void",
         "traffic_light_green": "traffic_light",
-        "void": "void",
-        "grouped_vehicles": "void",
-        "grouped_pedestrian_and_animals": "void",
+        "void": "void", # 没意义数据
+        "grouped_vehicles": "void", # 成组的交通工具
+        "grouped_pedestrian_and_animals": "void", # 成群的人或者动物
         "grouped_animals": "void",
-        "green_strip": "void",
+        "green_strip": "void", #图片绿色噪声
         "nature": "void",
-        "construction": "void",
+        "construction": "void", # 建筑
         "Other_NoSight": "void"}
 
     __scale_ai_class_names = {

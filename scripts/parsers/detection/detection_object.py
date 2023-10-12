@@ -10,7 +10,7 @@ and are not liable for anything.
 
 """
 import itertools
-from shapely.ops import cascaded_union
+from shapely.ops import cascaded_union,unary_union
 from parsers.detection.metadata import Metadata
 
 
@@ -230,7 +230,7 @@ class DetectionObject(object):
         # Merge polygons
         frist_polygon = self.get_polygon()
         second_polygon = object_to_merge.get_polygon()
-        union_polygon = cascaded_union([frist_polygon, second_polygon])
+        union_polygon = unary_union([frist_polygon, second_polygon])
 
         self.set_class_name(self.__class_name)
         self.set_metadata(self.__metadata)

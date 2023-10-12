@@ -52,7 +52,7 @@ def generate_2d_boxes(parser, class_names, class_colors, class_ids, class_obj_th
             skip_count += 1
             continue
         # occlusion_levels --> {0: 0%, 1: (1-25)%, 2: (26-50)%, 3: (51-75)%, 4: (76-99)%}
-        if occluded_ann and occlusion_level > 1:
+        if occluded_ann and occlusion_level > 3:
             skip_count += 1
             continue
 

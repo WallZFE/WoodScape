@@ -53,15 +53,15 @@ from parsers.detection.annotation_detection_parser import AnnotationDetectionPar
 def parser_arguments():
     # arguments
     arg_parser = argparse.ArgumentParser()
-    arg_parser.add_argument("--src_path", type=str,
+    arg_parser.add_argument("--src_path", type=str,default='/ssd2t/zhifu/Project/car_person/data/WoodScape/data/instance_annotations',
                             help="instance annotations directory")
-    arg_parser.add_argument("--dst_path", type=str,
+    arg_parser.add_argument("--dst_path", type=str,default='/ssd2t/zhifu/Project/car_person/data/WoodScape/data/box_2d_annotations',
                             help="box_2d annotations directory")
-    arg_parser.add_argument("--box_2d_class_mapping", type=str,
+    arg_parser.add_argument("--box_2d_class_mapping", type=str,default='configs/box_2d_mapping_5_classes.json',
                             help="box_2d_mapping_x_classes.json")
-    arg_parser.add_argument("--instance_class_mapping", type=str,
+    arg_parser.add_argument("--instance_class_mapping", type=str,default='mappers/class_names.json',
                             help="class_names.json")
-    arg_parser.add_argument("--rgb_image_path", type=str, nargs="?",
+    arg_parser.add_argument("--rgb_image_path", type=str, nargs="?",default='/ssd2t/zhifu/Project/car_person/data/WoodScape/data/rgb_images',
                             help="rgb_image directory")
 
     args = arg_parser.parse_args()
